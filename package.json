@@ -1,0 +1,8 @@
+{
+  "name": "chat-support",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/evertonlopesc/chat-support.git",
+  "author": "Everton Costa <everton.lopess@outlook.com>",
+  "license": "MIT"
+}
