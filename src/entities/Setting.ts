@@ -8,7 +8,7 @@ import {
 
 import { v4 as uuid } from "uuid";
 
-@Entity()
+@Entity("settings")
 export class Setting {
     @PrimaryColumn()
     id: string;
