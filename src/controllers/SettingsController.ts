@@ -14,6 +14,7 @@ export class SettingsController {
             });
 
             return response.json(settings);
+            
         } catch (error) {
             return response.status(400).json({
                 message: error.message,
