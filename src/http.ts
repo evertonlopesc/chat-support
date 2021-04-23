@@ -21,7 +21,7 @@ export const http = createServer(app);
 export const io = new Server(http);
 
 io.on("connection", (socket: Socket) => {
-    console.log("Conected", socket.id);
+    //console.log("Conected", socket.id);
 });
 
 app.use(express.json());
