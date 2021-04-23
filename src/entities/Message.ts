@@ -12,7 +12,7 @@ export class Message {
     admin_id: string;
 
     @Column()
-    message: string;
+    text: string;
     
     @JoinColumn({ name: "user_id" })
     @ManyToOne(() => User)
