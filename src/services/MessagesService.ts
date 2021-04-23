@@ -7,7 +7,7 @@ interface IMessagesCreate {
     user_id: string;
 };
 
-export class MessagesCreate {
+export class MessagesServices {
     async create({ admin_id, text, user_id } : IMessagesCreate) {
         const messagesRepository = getCustomRepository(MessagesRepository);
 
