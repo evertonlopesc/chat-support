@@ -1,3 +1,4 @@
+import { response } from "express";
 import { getCustomRepository } from "typeorm";
 import { MessagesRepository } from "../repositories/MessagesRepository";
 
@@ -20,5 +21,15 @@ export class MessagesService {
         await messagesRepository.save(message);
 
         return message;
+    };
+
+    async listByUser(user_id: string) {
+        const messagesRepository = getCustomRepository(MessagesRepository);
+
+        const list = messagesRepository.find({
+            user_id
+        });
+
+        return list;
     };
 };
