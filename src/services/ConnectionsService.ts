@@ -1,5 +1,5 @@
 import { getCustomRepository, Repository } from "typeorm";
-import { Connections } from "../entities/Connection";
+import { Connection } from "../entities/Connection";
 import { ConnectionsRepository } from "../repositories/ConnectionsRepository";
 
 interface IConnectionsCreate {
@@ -10,7 +10,7 @@ interface IConnectionsCreate {
 };
 
 export class ConnectionsService {
-    private connectionsRepository: Repository<Connections>;
+    private connectionsRepository: Repository<Connection>;
 
     constructor() {
         this.connectionsRepository = getCustomRepository(ConnectionsRepository);
@@ -27,5 +27,12 @@ export class ConnectionsService {
         await this.connectionsRepository.save(connections);
 
         return connections;
+    };
+
+    async findByUserId(user_id: string) {
+
+        const user = await this.connectionsRepository.findOne({ user_id });
+      
+        return user;
     };
 };
