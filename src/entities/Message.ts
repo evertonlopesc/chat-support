@@ -1,4 +1,10 @@
-import { Entity, Column, PrimaryColumn, CreateDateColumn, JoinColumn, ManyToOne  } from "typeorm";
+import { 
+    Entity, 
+    Column, 
+    PrimaryColumn, 
+    CreateDateColumn, 
+    JoinColumn, 
+    ManyToOne  } from "typeorm";
 
 import { v4 as uuid } from "uuid";
 import { User } from "./User";
@@ -27,7 +33,7 @@ export class Message {
     constructor() {
         if(!this.id) {
             this.id = uuid();
-        }
-    }
+        };
+    };
 
-}
+};
